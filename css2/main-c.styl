@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500)
+@import url(http://fonts.googleapis.com/css?family=Lato:300)
+mx768 ="(max-width: 768px)"
+
+html
+body 
+	font-family 'Lato' Arial Tahoma Helvetica sans-serif
+	padding-top 50px
+	padding-bottom 20px
+            
+h1
+h2
+h3
+h4
+	font-family 'Raleway',Tahoma, Helvetica, sans-serif
+
+
+
+.center h3
+	text-align center
+
+.center:hover
+	background-color #eee
+	border-radius 1.5em
+	transition-duration 0.6s
+
+.center:hover > .bordicon
+	background-color #fff
+
+.homeicon
+	background-color #428BCA
+	color #fff
+	border-radius 50%
+	font-size 1.7em
+	height 60px
+	left 0.6em
+	margin-top 0.55em
+	padding-top 0.55em
+	position absolute 
+	text-align center
+	vertical-align middle
+	width 60px
+
+.bordicon
+	border-bottom 2px solid #428BCA
+	border-radius 50%
+	height 90px
+	margin -30px auto 0 auto
+	position relative
+	width 90px
+
+.navbar-brand figure img 
+	width 120px
+
+.navbar .navbar-nav > .active > a
+	border-top 4px solid #428BCA
+
+.nav > li > a:focus
+.nav > li > a:hover
+	border-top 4px solid #bbb
+
+.social
+	background-color #428bca
+	border-bottom 2px solid #595959
+	border-top 3px solid #428bca
+	border-radius 0 0 7px 7px
+	color #fff
+	display inline
+	height 5em
+	top -3.2em
+	position absolute
+	right 10%
+	text-align center
+	font-weight bold
+	width 150px
+
+	@media mx768
+		background-color transparent
+		border-bottom none
+		color transparent
+		font-size 75%
+		height 3em
+		position absolute
+		right 33%
+		top 0
+		width 100px
+
+
+.social:hover
+	top 0
+	transition-duration 0.4s
+
+.socialic
+	margin-left 5px
+	margin-top 3px
+	padding 2px
+	width 32px
+
+	@media mx768
+		margin-left 2px
+		margin-top 1px
+		padding 1px
+		width 25px
+
+.ftg
+	background-color #666
+	height 3em
+	margin 0 auto
+
+	@media mx768
+		background-color rgba(60,60,60,.75)
+		border-radius 0 0 5px 5px
+
+.follow
+	display inline
+.fb
+.twit
+.gplus
+	display block
+	float left
+	margin 1em
+
+
+
+.col-lg-4
+	margin-bottom 5px
+	@media mx768
+		margin-bottom 35px
+
+.bottom
+	background-color blue
+	width 100%

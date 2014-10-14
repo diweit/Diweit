@@ -1,0 +1,175 @@
+/* Sitio Web: http://todoprogramacion.com.ve
+ URL al post: http://todoprogramacion.com.ve/articulo/1/crear-efectos-hover-llamativos-con-css3-parte-i
+* Autor Original: Alessio Atzeni
+* Post Original: http://tympanus.net/codrops/2011/11/02/original-hover-effects-with-css3/
+*
+*
+*
+* NOTA: Te pido un pequeño agradecimiento de tu parte hacia mi por haber compartido
+* estos ejemplos. Puedes hacerlo de dos maneras muy sencillas:
+* 1.- Haciendo clic sobre los anuncios de Google Adsense que se encuentran presentes en mi sitio web
+* 2.- Haciendo un pequeño donativo a través del botón Donate de PayPal de mi sitio web
+*
+* Tu eliges la manera en la cual apoyar mis desarrollos. Te estaré enormemente agradecido 
+*
+*
+*
+* Ejemplos probados en los siguientes navegadores:
+* Google Chrome 22
+* Mozilla Firefox 16
+* Apple Safari 5.1.7
+* Internet Explorer 10
+* Opera Browser 12.02
+*/
+
+
+/* Definiomos los estilos generales*/
+.view {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;}
+.view .masc, .view .content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+   left: 0;}
+.view img {
+    display: block;
+    position: relative;}
+.view h2 {
+    text-transform: uppercase;
+    color: #eee;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: hsla(0,0%,0%,0.8);
+    margin: 20px 0 0 0;}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #eee;
+    padding: 10px 20px 20px;
+    text-align: center;}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #eee;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000}
+/******************************************************************************/
+/* Estilos para ejemplo 2 */
+.view img {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;}
+.view .masc {
+    opacity: 0;
+    width: 300px;
+    padding: 60px;
+    height: 300px;
+    background-color: rgba(255,153,34,0.7);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: translate(265px, 145px) rotate(45deg);
+    -moz-transform: translate(265px, 145px) rotate(45deg);
+    -o-transform: translate(265px, 145px) rotate(45deg);
+    -ms-transform: translate(265px, 145px) rotate(45deg);
+   transform: translate(265px, 145px) rotate(45deg);}
+.view h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    -webkit-transform: translate(200px, -200px);
+    -moz-transform: translate(200px, -200px);
+    -o-transform: translate(200px, -200px);
+    -ms-transform: translate(200px, -200px);
+    transform: translate(200px, -200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;}
+.view p { 
+    -webkit-transform: translate(-200px, 200px);
+    -moz-transform: translate(-200px, 200px);
+    -o-transform: translate(-200px, 200px);
+    -ms-transform: translate(-200px, 200px);
+    transform: translate(-200px, 200px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;}
+.view a.info{
+    -webkit-transform: translate(0px, 100px);
+    -moz-transform: translate(0px, 100px);
+    -o-transform: translate(0px, 100px);
+    -ms-transform: translate(0px, 100px);
+    transform: translate(0px, 100px);
+   -webkit-transition: all 0.2s 0.1s ease-in-out;
+    -moz-transition: all 0.2s 0.1s ease-in-out;
+    -o-transition: all 0.2s 0.1s ease-in-out;
+    -ms-transition: all 0.2s 0.1s ease-in-out;
+    transition: all 0.2s 0.1s ease-in-out;}
+.view:hover .masc { 
+    opacity: 1;
+    -webkit-transform: translate(-80px, -125px) rotate(45deg);
+    -moz-transform: translate(-80px, -125px) rotate(45deg);
+    -o-transform: translate(-80px, -125px) rotate(45deg);
+    -ms-transform: translate(-80px, -125px) rotate(45deg);
+    transform: translate(-80px, -125px) rotate(45deg);}
+.view:hover h2 { 
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -o-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    transition-delay: 0.3s;}
+.view:hover p {
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -o-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transform: translate(0px,0px); 
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    transition-delay: 0.4s;}
+.view:hover a.info {
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -o-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transform: translate(0px,0px); 
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;}
+ 
